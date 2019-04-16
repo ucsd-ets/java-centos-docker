@@ -10,6 +10,6 @@ ENV M2_HOME=/opt/maven \
 RUN yum -y update && \
 	yum install -y java-${JAVA_VERSION}-openjdk-devel.x86_64 wget && \
 	cd /opt && \
-	wget -q http://www-eu.apache.org/dist/maven/maven-3/${3.3.9}/binaries/apache-maven-${3.3.9}-bin.tar.gz && \
-        tar xzf apache-maven-${3.3.9}-bin.tar.gz && \
-        ln -s apache-maven-${3.3.9} maven
+	wget -q http://www-eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
+        tar xzf apache-maven-${MAVEN_VERSION}-bin.tar.gz && \
+        ln -s apache-maven-${MAVEN_VERSION} maven
