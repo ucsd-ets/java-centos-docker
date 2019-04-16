@@ -5,7 +5,7 @@ ARG JAVA_VERSION=1.8.0
 
 ENV M2_HOME=/opt/maven
 ENV PATH=${M2_HOME}/bin:${PATH}
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
+ENV JAVA_HOME=/usr/lib/jvm/java-${JAVA_VERSION}-openjdk
 
 RUN yum -y update && \
 	yum install -y java-${JAVA_VERSION}-openjdk-devel.x86_64 wget && \
